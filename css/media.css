@@ -1,4 +1,7 @@
 @media (max-width: 415px), (max-width: 745px) {
+  :target {
+    scroll-margin-top: 2.5rem;
+  }
   .container {
     margin-left: 1rem;
     margin-right: 1rem;
