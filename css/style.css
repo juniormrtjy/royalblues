@@ -35,6 +35,9 @@ html {
   -webkit-scroll-behavior: smooth;
   -moz-scroll-behavior: smooth;
 }
+:target {
+  scroll-margin-top: 2.5rem;
+}
 
 .container {
   max-width: 1200px;
