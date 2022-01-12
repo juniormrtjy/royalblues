@@ -1,0 +1,243 @@
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'source sans pro', sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+}
+.borda {
+  border: 1px solid black;
+}
+/* ========== ROOT ========== */
+:root {
+  --hue: 195;
+  --main-color: hsl(var(--hue) 82% 50%);
+  --light-color: hsl(var(--hue) 79% 65%);
+  --dark-color: hsl(var(--hue) 43% 29%);
+  --alt-dark-color: hsl(var(--hue) 83% 23%);
+  --main-alt-color: hsl(var(--hue) 82% 39%);
+  --white: white;
+  --black: #0d0d0d;
+  /* ULTRA IMPORTANTE: COLOCAR HEIGHTS EM VARIÁVEL PARA FACILITAR NA HORA DO RESPONDIVO. PRECISANDO MEXER APENAS NO ROOT */
+}
+/* ========== LAYOUT ========== */
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+section {
+  padding: 2rem 0;
+}
+.title {
+  font-size: 2.3rem;
+  color: var(--alt-dark-color);
+}
+.a-btn {
+  text-align: center;
+  background: var(--dark-color);
+  color: var(--white);
+  width: 240px;
+  height: 50px;
+  font-size: 1.2rem;
+  line-height: 50px;
+  border-radius: 0.25rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+/* ========== HEADER ========== */
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: white;
+  border-bottom: 0.1rem solid #ccc;
+  box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.3);
+}
+#header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header nav .a-logo {
+  font-size: 3rem;
+  color: var(--black);
+  font-weight: bold;
+}
+#header nav .a-logo span {
+  color: var(--main-color);
+}
+#header ul {
+  display: flex;
+  gap: 2rem;
+}
+#header ul a {
+  color: var(--black);
+  font-size: 1.6rem;
+  display: block;
+  padding: 3rem 0;
+}
+/* ========== INTRO ========== */
+#intro {
+  background-color: var(--light-color);
+}
+#intro .box {
+  width: 750px;
+  max-width: 100%;
+}
+#intro .box h1 {
+  font-size: 3.5rem;
+  color: var(--white);
+}
+#intro .box p {
+  font-size: 1.1rem;
+  color: var(--white);
+}
+
+#intro .a-btn:hover {
+  transform: scale(1.03);
+}
+
+/* ========== MODELOS DE SITES ========== */
+#model .box-model {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2%;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 0.35rem;
+  transition: transform 0.3s;
+}
+#model .box-model:hover {
+  transform: scale(1.02);
+}
+#model .box-model .img {
+  flex: 30%;
+  border-radius: 0.35rem;
+  overflow: hidden;
+}
+#model .img img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+#model .box-model .text {
+  flex: 70%;
+  place-content: center;
+  gap: 1rem;
+  padding: 0 10% 0 2%;
+}
+#model .text h3 {
+  font-size: 1.9rem;
+  color: var(--light-color);
+}
+/* ========== BUY - COMPRAR ALGUMA MODELO ========== */
+#buy .icon-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+#buy .i-box {
+  flex: 0 0 300px;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--main-color);
+  padding: 10px;
+}
+#buy .i-box i {
+  font-size: 5rem;
+  text-align: center;
+  color: var(--light-color);
+  flex: 30%;
+}
+#buy .i-box p {
+  padding-left: 1.3rem;
+  flex: 70%;
+}
+/* ========== FOOTER ========== */
+footer {
+  background: var(--dark-color);
+}
+footer .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+footer .f-info {
+  flex: 50%;
+  padding: 5% 0;
+  color: white;
+  font-size: 1.2rem;
+  gap: 1rem;
+}
+footer .f-info h3 {
+  color: white;
+}
+footer .socials {
+  flex: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 4rem;
+  color: var(--light-color);
+}
+footer .socials a {
+  font-size: 4rem;
+  color: var(--light-color);
+}
+footer .socials i {
+  cursor: pointer;
+}
+/* MANUTENÇÃO */
+#maintenance {
+  display: grid;
+  place-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+#maintenance i,
+#maintenance h1,
+#maintenance p,
+#maintenance a {
+  font-size: 7rem;
+  text-align: center;
+  color: var(--dark-color);
+}
+#maintenance i {
+  animation: moveupi 1.2s linear infinite;
+  position: relative;
+}
+#maintenance a {
+  background: var(--main-alt-color);
+  border-radius: 0.25rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+@keyframes moveupi {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -10px;
+  }
+  100% {
+    top: 0;
+  }
+}

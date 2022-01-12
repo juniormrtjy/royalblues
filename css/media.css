@@ -1,0 +1,63 @@
+@media (max-width: 415px), (max-width: 745px) {
+  .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  #header {
+    padding: 1rem 0;
+  }
+  #header nav .a-logo {
+    font-size: 1.4rem;
+  }
+  #header nav .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    display: grid;
+    place-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+  }
+  #header nav.show .menu {
+    opacity: 1;
+    visibility: visible;
+  }
+  #header ul {
+    display: grid;
+    text-align: center;
+    gap: 2rem;
+  }
+  #header nav .close {
+    position: fixed;
+    top: 1.2rem;
+    right: 1rem;
+    font-size: 1.2rem;
+  }
+  #header ul a {
+    padding: 0px 0px 0.25rem 0px;
+  }
+  /* MODEL */
+  #model .box-model {
+    padding: 5%;
+  }
+  /* FOOTER */
+  #footer .socials a {
+    font-size: 2.6rem;
+  }
+  /* MANUTENÇÃO */
+  #maintenance i,
+  #maintenance h1,
+  #maintenance p,
+  #maintenance a {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 746px) {
+  .troca {
+    display: none;
+  }
+}
