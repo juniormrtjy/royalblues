@@ -36,7 +36,7 @@ html {
   -moz-scroll-behavior: smooth;
 }
 :target {
-  scroll-margin-top: 2.5rem;
+  scroll-margin-top: 7rem;
 }
 
 .container {
